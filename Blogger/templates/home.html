@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Home</h2>
+    <div class="jumbotron container">
+        {% for post in post_list %}
+            <h3><a href="{% url 'post_detail' post.pk%}"><p>{{ post.title }}</p></a></h3>
+            <p>{{  post.body }}</p>
+            <p>by:{{ post.author }}</p>
+        {% endfor %}
+    </div>
+{% endblock content %}
