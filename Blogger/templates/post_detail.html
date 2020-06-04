@@ -1,11 +1,10 @@
+<!-- templates/post_detail.html -->
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Detail</h2>
-    <div class="jumbotron container">
-        
-            <h4><p>{{ post.title }}</p></h4>
-            <p>{{  post.body }}</p>
-            
-    </div>
+<div class="post-entry">
+<h2>{{ object.title }}</h2>
+<p>{{ object.body }}</p>
+</div>
+
 {% endblock content %}
